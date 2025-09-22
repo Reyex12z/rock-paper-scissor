@@ -21,6 +21,7 @@ function getComputerChoice() {
 
 function getHumanChoice() {
 
+    alert("enter your choice 5 times.")
     let userInput = prompt("Enter your choice: ").toLowerCase()
 
     while (userInput != "rock" && userInput != "paper" && userInput != "scissor") {
