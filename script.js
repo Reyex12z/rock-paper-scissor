@@ -20,13 +20,11 @@ function getComputerChoice() {
  }
 
 function getHumanChoice() {
-
-    alert("enter your choice 5 times.")
     let userInput = prompt("Enter your choice: ").toLowerCase()
 
     while (userInput != "rock" && userInput != "paper" && userInput != "scissor") {
         console.log("only rock, paper or scissor ")
-        userInput = prompt("Please enter again: ").toLowerCase()
+        userInput = prompt("only rock, paper or scissor.  Please enter again: ").toLowerCase()
     }
 
     return userInput;
@@ -81,6 +79,10 @@ const div = document.querySelector('#dv')
 let p1 = document.createElement('p')
 let p2 = document.createElement('p')
 
+alert("Welcome to the Rock Paper Scissor game. you VS computer.      the winner will be announced at the end.")
+alert("to start the game click on the 'new round' button")
+alert("then insert your 5 round choices first.")
+
 function playGame() {
     for (let i = 0; i < 5; i++) {
 
@@ -89,15 +91,15 @@ function playGame() {
     }
         if (humanScore > computerScore) {
             p1.textContent = "YOU WON! "
-            p2.textContent = `Total number of wins:  ${humanScore}.  Total losses:  ${computerScore}`;
+            p2.textContent = `Total number of wins:  ${humanScore}.   computer wins:  ${computerScore}`;
         }
         else if (humanScore < computerScore) {
             p1.textContent = "You lost the game! "
-            p2.textContent = `Total number of wins:  ${humanScore}.  Total losses:  ${computerScore}`
+            p2.textContent = `Total number of wins:  ${humanScore}.   computer wins:  ${computerScore}`
         }
         else {
             p1.textContent = "Draw! "
-            p2.textContent = `"Total number of wins:  ${humanScore}.  Total losses:  ${computerScore}`
+            p2.textContent = `"Total number of wins:  ${humanScore}.   computer wins:  ${computerScore}`
         }
     div.append(p1, p2)
 }
