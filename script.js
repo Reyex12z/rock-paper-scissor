@@ -96,5 +96,7 @@ function playGame() {
     
 }
 
-playGame();
-
+const btn = document.querySelector('#btn')
+btn.addEventListener('click', function() {
+    playGame()}
+)
