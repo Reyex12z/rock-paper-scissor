@@ -75,6 +75,11 @@ function playRound() {
 
 }
 
+
+const div = document.querySelector('#dv')
+let p1 = document.createElement('p')
+let p2 = document.createElement('p')
+
 function playGame() {
     for (let i = 0; i < 5; i++) {
 
@@ -82,18 +87,18 @@ function playGame() {
 
     }
         if (humanScore > computerScore) {
-            console.log("YOU WON! ");
-            console.log("Total number of wins: ", humanScore," Total losses: ", computerScore);
+            p1.textContent = "YOU WON! "
+            p2.textContent = `Total number of wins:  ${humanScore}.  Total losses:  ${computerScore}`;
         }
         else if (humanScore < computerScore) {
-            console.log("You lost the game! ");
-            console.log("Total number of wins: ", humanScore," Total losses: ", computerScore);
+            p1.textContent = "You lost the game! "
+            p2.textContent = `Total number of wins:  ${humanScore}.  Total losses:  ${computerScore}`
         }
         else {
-            console.log("Draw! ");
-            console.log("Total number of wins: ", humanScore," Total losses: ", computerScore);
+            p1.textContent = "Draw! "
+            p2.textContent = `"Total number of wins:  ${humanScore}.  Total losses:  ${computerScore}`
         }
-    
+    div.append(p1, p2)
 }
 
 const btn = document.querySelector('#btn')
