@@ -24,7 +24,7 @@ function getHumanChoice() {
     let userInput = prompt("Enter your choice: ").toLowerCase()
 
     while (userInput != "rock" && userInput != "paper" && userInput != "scissor") {
-        console.log("not acceptable input! ")
+        console.log("only rock, paper or scissor ")
         userInput = prompt("Please enter again: ").toLowerCase()
     }
 
